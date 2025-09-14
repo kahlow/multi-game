@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Mayhem 🚀</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1 class="game-title">MULTIPLICATION MAYHEM</h1>
+            <div class="score-display">
+                <span class="score">Score: <span id="score">0</span>/<span id="total">0</span></span>
+                <span class="accuracy">Accuracy: <span id="accuracy">0%</span></span>
+            </div>
+        </div>
+
+        <div id="setup-screen" class="screen">
+            <div class="setup-panel">
+                <h2>Ready to multiply like a BOSS? 🤖</h2>
+                <div class="input-group">
+                    <label for="question-count">How many questions do you want to tackle?</label>
+                    <input type="number" id="question-count" min="5" max="200" value="20">
+                </div>
+                <button id="start-game" class="neon-btn">BLAST OFF! 🚀</button>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+                <span class="progress-text" id="progress-text">Question 1 of 20</span>
+            </div>
+
+            <div class="question-panel">
+                <div class="question" id="question">4 × 7 = ?</div>
+                <div class="feedback" id="feedback"></div>
+            </div>
+
+            <div class="answers-grid" id="answers-grid">
+                <button class="answer-btn" data-answer="28">28</button>
+                <button class="answer-btn" data-answer="24">24</button>
+                <button class="answer-btn" data-answer="32">32</button>
+                <button class="answer-btn" data-answer="21">21</button>
+            </div>
+        </div>
+
+        <div id="results-screen" class="screen hidden">
+            <div class="results-panel">
+                <h2>Mission Complete! 🎯</h2>
+                <div class="final-stats">
+                    <div class="stat">
+                        <span class="stat-label">Final Score:</span>
+                        <span class="stat-value" id="final-score">0/0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Accuracy:</span>
+                        <span class="stat-value" id="final-accuracy">0%</span>
+                    </div>
+                </div>
+
+                <div id="missed-problems" class="missed-section">
+                    <h3>Problems to Practice More:</h3>
+                    <div id="missed-list"></div>
+                </div>
+
+                <div class="results-actions">
+                    <button id="play-again" class="neon-btn">Play Again! 🔄</button>
+                    <button id="practice-missed" class="neon-btn secondary">Practice Missed 💪</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
